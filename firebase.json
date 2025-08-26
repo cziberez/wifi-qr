@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/wifi-qr",
+    "public": "dist/wifi-qr/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
