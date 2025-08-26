@@ -7,7 +7,7 @@ The QR code can also be displayed in a **print-friendly card format** so you can
 
 ### Features
 - Pure **frontend only** (no backend required).
-- **Automatic QR refresh** 2 seconds after typing.
+- **Automatic QR refresh**
 - **Print view** with a clean design (auto-close after print or cancel).
 - **Dark/Light mode** toggle (default follows system theme).
 - GitHub footer link.
@@ -21,7 +21,7 @@ A QR kód egy **nyomtatható kártya formátumban** is megjeleníthető, így k�
 
 ### Funkciók
 - Teljesen **frontend alapú** (nincs szükség backendre).
-- **Automatikus QR frissítés** 2 másodperccel a gépelés után.
+- **Automatikus QR frissítés**
 - **Nyomtatási nézet** letisztult dizájnnal (nyomtatás vagy mégse után bezáródik).
 - **Sötét/Világos mód** váltó (alapból a rendszer témáját követi).
 - GitHub link az oldal alján.
