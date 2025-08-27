@@ -6,5 +6,6 @@
   "PRINT": "Print",
   "LIGHT_MODE": "Switch to light mode",
   "DARK_MODE": "Switch to dark mode",
-  "WIFI_ACCESS": "Wifi access"
+  "WIFI_ACCESS": "Wifi access",
+  "NO_QR": "QR code will appear here"
 }

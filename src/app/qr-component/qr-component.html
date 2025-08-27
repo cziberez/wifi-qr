@@ -17,11 +17,15 @@
       <input id="password" [(ngModel)]="password" (input)="onInputChange()"/>
     </div>
 
-    <div class="qr-preview" *ngIf="qrCodeUrl">
+    <div class="qr-preview">
       <h2>{{ 'QR_CODE' | transloco }}:</h2>
-      <img [src]="qrCodeUrl" alt="{{ 'QR_CODE' | transloco }}"/>
-      <br/>
-      <button (click)="printQr()">{{ 'PRINT' | transloco }}</button>
+      <div class="qr-box">
+        <img *ngIf="qrCodeUrl" [src]="qrCodeUrl" alt="{{ 'QR_CODE' | transloco }}"/>
+        <div *ngIf="!qrCodeUrl" class="qr-placeholder">
+          {{ 'NO_QR' | transloco }}
+        </div>
+      </div>
+      <button (click)="printQr()" [disabled]="!qrCodeUrl">{{ 'PRINT' | transloco }}</button>
     </div>
   </div>
 </main>
