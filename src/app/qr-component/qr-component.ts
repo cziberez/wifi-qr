@@ -25,6 +25,11 @@ export class QrComponent implements OnInit {
   }
 
   ngOnInit() {
+    const browserLang = navigator.language
+    const lang = browserLang.split('-')[0];
+    const availableLangs = ['en', 'hu'];
+    const defaultLang = availableLangs.includes(lang) ? lang : 'en';
+    this.translocoService.setActiveLang(defaultLang);
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) {
       document.body.classList.add('dark-theme');

@@ -1,3 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ 'TITLE' | transloco }}</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
 <header class="header">
   <button class="theme-toggle" (click)="toggleTheme()"
           [attr.aria-label]="isDarkMode ? ('LIGHT_MODE' | transloco) : ('DARK_MODE' | transloco)">
@@ -11,16 +21,16 @@
   <div class="container">
     <div class="form">
       <label for="ssid">{{ 'SSID' | transloco }}:</label>
-      <input id="ssid" [(ngModel)]="ssid" (input)="onInputChange()" />
+      <input id="ssid" [(ngModel)]="ssid" (input)="onInputChange()"/>
 
       <label for="password">{{ 'PASSWORD' | transloco }}:</label>
-      <input id="password" [(ngModel)]="password" (input)="onInputChange()" />
+      <input id="password" [(ngModel)]="password" (input)="onInputChange()"/>
     </div>
 
     <div class="qr-preview" *ngIf="qrCodeUrl">
       <h2>{{ 'QR_CODE' | transloco }}:</h2>
       <img [src]="qrCodeUrl" alt="{{ 'QR_CODE' | transloco }}"/>
-      <br />
+      <br/>
       <button (click)="printQr()">{{ 'PRINT' | transloco }}</button>
     </div>
   </div>
@@ -34,3 +44,5 @@
     </svg>
   </a>
 </footer>
+</body>
+</html>
