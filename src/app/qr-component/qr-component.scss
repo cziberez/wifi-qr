@@ -18,7 +18,6 @@
   transform: scale(1.2);
 }
 
-/* --- Main container --- */
 .container {
   display: flex;
   flex-direction: column;
@@ -77,10 +76,11 @@
   }
 }
 
-/* --- Footer GitHub ikon --- */
 .footer {
   margin-top: 40px;
   text-align: center;
+  padding: 20px 0;
+}
 
   .github-icon {
     width: 32px;
@@ -89,4 +89,3 @@
     transition: color 0.3s;
     cursor: pointer;
   }
-}
