@@ -83,19 +83,22 @@ export class QrComponent implements OnInit {
     const left = (screen.width / 2) - (width / 2);
     const top = (screen.height / 2) - (height / 2);
 
+    // Transloco-val lekért szövegek
+    const wifiLabel = this.translocoService.translate('WIFI_ACCESS');
+    const ssidLabel = this.translocoService.translate('SSID');
+    const passwordLabel = this.translocoService.translate('PASSWORD');
+
     const printWindow = window.open('', '_blank',
       `width=${width},height=${height},top=${top},left=${left}`
     );
-    if (!printWindow) {
-      return;
-    }
+    if (!printWindow) return;
 
     printWindow.document.write(`
     <html>
       <head>
-        <title>WiFi QR Kód</title>
+        <title>${wifiLabel}</title>
         <style>
-          @page { margin: 0; size: auto; }  /* nincs fejléc/lábléc */
+          @page { margin: 0; size: auto; }
           body { font-family: Arial, sans-serif; text-align: center; padding: 40px; margin: 0; }
           .card {
             border: 2px solid #444;
@@ -111,9 +114,9 @@ export class QrComponent implements OnInit {
       </head>
       <body>
         <div class="card">
-          <h2>WiFi hozzáférés</h2>
-          <p><b>SSID:</b> ${this.ssid}</p>
-          <p><b>Jelszó:</b> ${this.password}</p>
+          <h2>${wifiLabel}</h2>
+          <p><b>${ssidLabel}:</b> ${this.ssid}</p>
+          <p><b>${passwordLabel}:</b> ${this.password}</p>
           <img src="${this.qrCodeUrl}" />
         </div>
         <script>
