@@ -26,10 +26,11 @@ body.dark-theme {
 
   /* GitHub ikon sötét módban */
   .footer .github-icon {
-    color: #eee;
+    color: #58a6ff;
+    transition: color 0.2s ease;
   }
   .footer .github-icon:hover {
-    color: #fff;
+    color: #1f6feb;
   }
 }
 
@@ -55,6 +56,6 @@ body.light-theme {
     color: inherit;
   }
   .footer .github-icon:hover {
-    color: #4078c0; /* GitHub kék hover */
+    color: #4078c0;
   }
 }

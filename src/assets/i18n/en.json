@@ -1,0 +1,9 @@
+{
+  "TITLE": "WiFi QR Generator",
+  "SSID": "SSID",
+  "PASSWORD": "Password",
+  "QR_CODE": "QR Code",
+  "PRINT": "Print",
+  "LIGHT_MODE": "Switch to light mode",
+  "DARK_MODE": "Switch to dark mode"
+}

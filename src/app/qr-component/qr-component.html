@@ -1,27 +1,27 @@
 <header class="header">
   <button class="theme-toggle" (click)="toggleTheme()"
-          [attr.aria-label]="isDarkMode ? 'Világos mód' : 'Sötét mód'">
-    <span *ngIf="isDarkMode">🌙</span>
-    <span *ngIf="!isDarkMode">☀️</span>
+          [attr.aria-label]="isDarkMode ? ('LIGHT_MODE' | transloco) : ('DARK_MODE' | transloco)">
+    <span *ngIf="!isDarkMode">🌙</span>
+    <span *ngIf="isDarkMode">☀️</span>
   </button>
-  <h1 style="display: block; margin: 0 auto;">WiFi QR Generátor</h1>
+  <h1 style="display: block; margin: 0 auto;">{{ 'TITLE' | transloco }}</h1>
 </header>
 
 <main class="main-content">
   <div class="container">
     <div class="form">
-      <label for="ssid">SSID:</label>
+      <label for="ssid">{{ 'SSID' | transloco }}:</label>
       <input id="ssid" [(ngModel)]="ssid" (input)="onInputChange()" />
 
-      <label for="password">Jelszó:</label>
+      <label for="password">{{ 'PASSWORD' | transloco }}:</label>
       <input id="password" [(ngModel)]="password" (input)="onInputChange()" />
     </div>
 
     <div class="qr-preview" *ngIf="qrCodeUrl">
-      <h2>QR kód:</h2>
-      <img [src]="qrCodeUrl" alt="WiFi QR Kód" />
+      <h2>{{ 'QR_CODE' | transloco }}:</h2>
+      <img [src]="qrCodeUrl" alt="{{ 'QR_CODE' | transloco }}"/>
       <br />
-      <button (click)="printQr()">Nyomtatás</button>
+      <button (click)="printQr()">{{ 'PRINT' | transloco }}</button>
     </div>
   </div>
 </main>

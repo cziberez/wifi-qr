@@ -2,15 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgIf} from '@angular/common';
 import * as QRCode from 'qrcode';
+import {TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-qr-component',
   imports: [
     FormsModule,
-    NgIf
+    NgIf,
+    TranslocoPipe
   ],
   templateUrl: './qr-component.html',
-  styleUrl: './qr-component.scss'
+  styleUrl: './qr-component.scss',
 })
 export class QrComponent implements OnInit {
   ssid = '';
@@ -18,6 +20,9 @@ export class QrComponent implements OnInit {
   qrCodeUrl: string | null = null;
   isDarkMode = false;
   private timer: any;
+
+  constructor(private translocoService: TranslocoService) {
+  }
 
   ngOnInit() {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

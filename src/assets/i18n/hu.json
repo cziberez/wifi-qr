@@ -1,0 +1,9 @@
+{
+  "TITLE": "WiFi QR Generátor",
+  "SSID": "SSID",
+  "PASSWORD": "Jelszó",
+  "QR_CODE": "QR kód",
+  "PRINT": "Nyomtatás",
+  "LIGHT_MODE": "Világos módra váltás",
+  "DARK_MODE": "Sötét módra váltás"
+}
